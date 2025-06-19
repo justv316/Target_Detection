@@ -126,12 +126,13 @@ C) Scripts
 ---------------------------------------------------------------------------
 
 D) Final Steps
- - Now that everything is created
+ - Now that everything is created:
  
- Assign [!SpTargetDetection] the Scripted Effect TargetDetectionEffectScript. 
- Assign [!SpTargetDetected] the Scripted Effect TargetDetectedEffectScript. 
- Assign [!TargetDetectionQuest] the QuestScript TargetDetectionQuestScript. 
- Assign [!TargetDetectionSpellQuest] the QuestScript TargetDetectionSpellQuestScript.
+ 1. Assign [!SpTargetDetection] the Scripted Effect TargetDetectionEffectScript. 
+ 2. Assign [!SpTargetDetected] the Scripted Effect TargetDetectedEffectScript. 
+ 3. Assign [!TargetDetectionQuest] the QuestScript TargetDetectionQuestScript. 
+ 4. Assign [!TargetDetectionSpellQuest] the QuestScript TargetDetectionSpellQuestScript.
+ 
  - Target Detection is now set up to work in your mod. 
 
 |  Troubleshooting!  |
