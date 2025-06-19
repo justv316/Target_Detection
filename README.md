@@ -23,6 +23,8 @@
 1. Create new cell, set the EditorID to HoldingCell or etc.
 2. Inside the cell, place 4 XMarkerHeading references. 
 3. Name each XMarker to suit your mod.
+
+
 | ScriptVariable | Example | Description |
 | ------------- | ------------- |:-------------:|
 | !rCasterRef1 | TECasterRef | Used to apply the Target Detection AOE to the player. |
@@ -37,6 +39,8 @@
 1. Create two new quests. 
 2. Name each to suit your mod. 
 3. Set them to Start Game Enabled.
+
+
 | ScriptVariable | Example | Description |
 | ------------- | ------------- |:-------------:|
 | !TargetDetectionQuest | TEQQTargetDetectionQuest | Runs Target Detection and the management of references. This is the Quest that is running TargetDetectionQuestScript. |
@@ -49,6 +53,8 @@
 #### Instructions: 
 1. Create the necessary spells. 
 2. Name them to suit your mod - Each spell has its own details.
+
+
 | ScriptVariable | Example | Description | Details | Flags
 |-------------|:-------------:|:-------------:|:-------------:|:-------------:|
 | !SpTargetDetection | TESpTargetDetection | Used to apply the Script Effect 'TargetDetectionEffectScript' to all actors in the spells distance | Touch; 0 Mag; 750 Area; 3 Seconds; Script Effect (Will be: TargetDetectionSpellQuestScript) | Touch Spell Explodes w/ no Target; Immune to Silence; Area Effect Ignores LOS; Script Effect Always Applies; Disallow Spell Absorb/Reflect
@@ -62,6 +68,8 @@
 #### Instructions: 
 1. Create two new Global Variables. 
 2. Name them to suit your mod. Each are shorts. 
+
+
 | ScriptVariable | Example | Description |
 | ------------- | ------------- |:-------------:|
 | !bTargetDetection | TEbTargetDetection | Determines whether or not Target Detection is running
@@ -69,7 +77,7 @@
 
 In the template example, a script that tracks how many of the same set item the player is wearing, and gives them a buff in the form of an ability carrying an effect script that does various things, and sets this Global Variable to 1. The TargetDetectionSpellQuestScript tracks this global to turn on target detection. 
 
-## C) Scripts
+## Scripts
 Now that the plugin is setup, we can write our scripts and attach them where needed. 
 
 NOTE: I encourage you to write your scripts in Notepad++ (or your preferred IDE) first before adding them to your esp. I also urge you to use the Construction Set Extender https://www.nexusmods.com/oblivion/mods/36370 
