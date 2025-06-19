@@ -50,7 +50,7 @@
 1. Create the necessary spells. 
 2. Name them to suit your mod - Each spell has its own details.
 | ScriptVariable | Example | Description | Details | Flags
-|-------------|-------------|-------------| -------------|:-------------:|
+|-------------|:-------------:|:-------------:|:-------------:|:-------------:|
 | !SpTargetDetection | TESpTargetDetection | Used to apply the Script Effect 'TargetDetectionEffectScript' to all actors in the spells distance | Touch; 0 Mag; 750 Area; 3 Seconds; Script Effect (Will be: TargetDetectionSpellQuestScript) | Touch Spell Explodes w/ no Target; Immune to Silence; Area Effect Ignores LOS; Script Effect Always Applies; Disallow Spell Absorb/Reflect
 | !SpTargetDetected | TESpTargetDetected | Used to determine whether or not a target is being managed or not | Touch; 0 Mag; 0 Area; 600 Seconds; Script Effect (Will be: TargetDetectedEffectScript) | Immune to Silence; Script Effect Always Applies; Disallow Spell Absorb/Reflect
 | !SpDispel | TESpAuraDispelDebuff |  Used to dispel applied effects. | Touch; 1000 Mag; 0 Area; 0 Seconds; Dispel | Immune to Silence; Disallow Spell Absorb/Reflect
