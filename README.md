@@ -163,15 +163,18 @@ I do all of my testing in Remaster exclusively.
  4. Assign !TargetDetectionSpellQuest the QuestScript TargetDetectionSpellQuestScript.
  
 * Target Detection is now set up to work in your mod. 
+</details>
+<details>
+<summary>Troubleshooting</summary>
 
-##Troubleshooting!
+## Troubleshooting!
 
 
 * Changing the effect on !SpTargetDetected to a visual effect can help you visually confirm whether or not an actor is being tracked.
 
 * If an XMarker is tasked to do 2 or more different things at the exact same frame, the game will crash, therefore I use 4 distinct XMarker caster's to cast spells to avoid that.
 
-##Final Thoughts
+</details>
+## Closing Thoughts
  
 * If you require support with this, you can find me in the Oblivion Remastered Modding Community Discord or the /r/OblivionMods Discord as Fox/TheFoxOfKvatch. You can also send me a message on Nexus and I will eventually respond to it. I prefer to not be added in Discord until after we chat. 
-</details>
