@@ -8,13 +8,14 @@
 	You must link in your mods credits to either the GitHub repository (https://github.com/justv316/Target_Detection) or the Nexus Mod Page (Insert Mod Page once its created) Failure to do so is cringe, uncool, and plagiarism, so please don't do that.  
 
 <details>
-<summary>Description and Disclaimer</summary?
+<summary>Description and Disclaimer</summary>
 ## Description and Disclaimer
  This is a modders resource to dynamically collect and manage nearby actor references based on modder defined conditionals. This is accomplished by a spell script storing a reference as a temporary reference in the quest script, storing that temporary reference as a numbered reference, and then clearing the temporary reference variable. Once the reference is managed, the modder can do whatever they wish to it. This template is taken from my own version of this where I am using it to determine valid targets for an aura effect applied by wearing 6 pieces of matching gear. The script that handles the set bonuses sets a global variable (!bDebuffConditional) that tells the TargetDetectionSpellQuestScript to start looking for targets. 
  NOTE: While you are free to change anything, this is being published with the intention that you only change the "A. ScriptVariables to be set by Modder" to match your mod. Changing the structure of the script outside of what is advised can lead to unpredicatable results. 
 
 </details>
- 
+<details>
+<summary>Plugin Setup</summary>
 ## Plugin Setup
  Before you begin scripting you must create a few things in your plugin. These will be used later in the script.
    ScriptVariable These are Variables to be set by the modder in the template script files. These tables associates the ScriptVariable with what they are in your mod.
@@ -79,7 +80,9 @@
 | !bDebuffConditional | TEbAuraCursed | Determines whether or not Target Detection should be running. This can be whatever you need it to be. 
 
 In the template example, a script that tracks how many of the same set item the player is wearing, and gives them a buff in the form of an ability carrying an effect script that does various things, and sets this Global Variable to 1. The TargetDetectionSpellQuestScript tracks this global to turn on target detection. 
-
+</details>
+<details>
+<summary>Scripts</summary>
 ## Scripts
 Now that the plugin is setup, we can write our scripts and attach them where needed. 
 
@@ -141,6 +144,9 @@ The first conditional (if rRef1.IsSpellTarget !SpTargetDetected == 0) checks if 
 Within the Debuff block, we define what we want to do to the reference and conditionals to do those things. (if !bDebuffConditional == 1) If we want to apply a effect to the reference, we must use a CasterRef to do so, as AddSpell applies the spell to the base actor, effecting every version of that actor until removed. Once the Debuff is applied, we track whether or not the actor should still have the debuff. For example, if the reference leaves a certain range of the player, remove the debuff. We must again use a CasterRef to dispel the debuff (When I tried using rRef1.Dispel SpDebuffEffect it just didn't work?) This block can be expanded to fit your specific situation as when whether or not a target should be effected by the debuff is entirely up to you.
 The 2 conditionals I have in the template are (if Player.GetDistance rRef1 > 150) and (if rRef1.GetCombatTarget != Player). These are the opposite of the conditionals established in TargetDetectionEffectScript
 
+</details>
+<details>
+<summary>Final Steps</summary>
 
 ## Final Steps
 ### Now that everything is created:
@@ -162,3 +168,4 @@ If an XMarker is tasked to do 2 or more different things at the exact same frame
 ##Final Thoughts
  
 If you require support with this, you can find me in the Oblivion Remastered Modding Community Discord or the /r/OblivionMods Discord as Fox/TheFoxOfKvatch. You can also send me a message on Nexus and I will eventually respond to it. I prefer to not be added in Discord until after we chat. 
+</details>
