@@ -4,10 +4,12 @@
 * __Estimated Difficulty:__ Intermediate
 * __Required Knowledge:__ Existing Oblivion/Remastered modding & scripting experience. 
 	* Familiarity with Global Variables and how to create them; types of spells and effect scripts; Quests and quest scripts; XMarker References.
-* __License and Usage:__ This has been given the MIT License. Please refer to the license document for full information, but basically, you can use this and change it and do whatever you want with it so long as you properly credit me. This resource is exclusively being distributed via its GitHub repository, and is being posted on Nexus linking to the repository. 
+
+# License and Usage
+
+* This has been given the MIT License. Please refer to the license document for full information, but basically, you can use this and change it and do whatever you want with it so long as you properly credit me. You must include a link to this page or the repository in your mods readme as well as include me in your credits. You do not need to ask me for permission to use this so long as you follow those requirements. This resource is exclusively being distributed via its GitHub repository and Nexus.
 	* You must link in your mods credits to either the GitHub repository (https://github.com/justv316/Target_Detection) or the Nexus Mod Page (Insert Mod Page once its created) Failure to do so is cringe, uncool, and plagiarism, so please don't do that.  
-* [Preview of Target Detection in motion](https://youtu.be/lC1ze3wlmHU)
-	* The Feather Visual effect is a visual confirmation of Target Detection being applied, and the Fire effect is the debuff being applied.
+
 	
 <details>
 <summary>Description and Disclaimer</summary>
@@ -15,8 +17,9 @@
 ## Description and Disclaimer
 
 * This is a modders resource to dynamically collect and manage nearby actor references based on modder defined conditionals. This is accomplished by a spell script storing a reference as a temporary reference in the quest script, storing that temporary reference as a numbered reference, and then clearing the temporary reference variable. Once the reference is managed, the modder can do whatever they wish to it. This template is taken from my own version of this where I am using it to determine valid targets for an aura effect applied by wearing 6 pieces of matching gear. The script that handles the set bonuses sets a global variable (!bDebuffConditional) that tells the TargetDetectionSpellQuestScript to start looking for targets. 
-* __NOTE:__ While you are free to change anything, this is being published with the intention that you only change the "A. ScriptVariables to be set by Modder" to match your mod. Changing the structure of the script outside of what is advised can lead to unpredicatable results. 
-
+* __NOTE:__ While you are free to change anything, this is being published with the intention that you only change the "A. ScriptVariables to be set by Modder" to match your mod. Changing the structure of the script outside of what is advised can lead to unpredictable results. 
+* [Preview of Target Detection in motion](https://youtu.be/lC1ze3wlmHU)
+	* The Feather Visual effect is a visual confirmation of Target Detection being applied, and the Fire effect is the debuff being applied.
 
 </details>
 <details>
@@ -167,10 +170,19 @@ I do all of my testing in Remaster exclusively.
  
 * Target Detection is now set up to work in your mod. 
 </details>
+
+<details>
+<summary>The Sample Plugin</summary>
+
+## The Sample Plugin
+* This plugin contains a working version of Target Detection for you to explore it in an isolated form.
+	* To trigger Target Detection, Equip an Ebony Battleaxe (player.additem 00035E6F 1).
+
+</details>
 <details>
 <summary>Troubleshooting</summary>
 
-## Troubleshooting!
+## Troubleshooting
 
 
 * Changing the effect on !SpTargetDetected to a visual effect can help you visually confirm whether or not an actor is being tracked.
@@ -181,4 +193,5 @@ I do all of my testing in Remaster exclusively.
 
 ## Closing Thoughts
  
-* If you require support with this, you can find me in the Oblivion Remastered Modding Community Discord or the /r/OblivionMods Discord as Fox/TheFoxOfKvatch. You can also send me a message on Nexus and I will eventually respond to it. I prefer to not be added in Discord until after we chat. 
+* If you require support with this, want to collaborate or to raise feedback you can find me in the Oblivion Remastered Modding Community Discord or the /r/OblivionMods Discord as Fox/TheFoxOfKvatch. You can also send me a message on Nexus and I will eventually respond to it. I prefer to not be added in Discord until after we chat. 
+* Please submit bug reports as needed.
