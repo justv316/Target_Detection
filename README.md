@@ -13,7 +13,7 @@
 ## Description and Disclaimer
 
 * This is a modders resource to dynamically collect and manage nearby actor references based on modder defined conditionals. This is accomplished by a spell script storing a reference as a temporary reference in the quest script, storing that temporary reference as a numbered reference, and then clearing the temporary reference variable. Once the reference is managed, the modder can do whatever they wish to it. This template is taken from my own version of this where I am using it to determine valid targets for an aura effect applied by wearing 6 pieces of matching gear. The script that handles the set bonuses sets a global variable (!bDebuffConditional) that tells the TargetDetectionSpellQuestScript to start looking for targets. 
-* NOTE: While you are free to change anything, this is being published with the intention that you only change the "A. ScriptVariables to be set by Modder" to match your mod. Changing the structure of the script outside of what is advised can lead to unpredicatable results. 
+* __NOTE:__ While you are free to change anything, this is being published with the intention that you only change the "A. ScriptVariables to be set by Modder" to match your mod. Changing the structure of the script outside of what is advised can lead to unpredicatable results. 
 * [Preview of Target Detection in motion](https://youtu.be/lC1ze3wlmHU)
 	* The Feather Visual effect is a visual confirmation of Target Detection being applied, and the Fire effect is the debuff being applied.
 
@@ -65,7 +65,7 @@
 2. Name them to suit your mod - Each spell has its own details.
 
 
-| ScriptVariable | Example | Description | Details | Flags
+| ScriptVariable | Example | Description | Details | Flags | 
 |-------------|-------------|-------------|-------------|-------------|
 | !SpTargetDetection | TESpTargetDetection | Used to apply the Script Effect 'TargetDetectionEffectScript' to all actors in the spells distance | Touch; 0 Mag; 750 Area; 3 Seconds; Script Effect (Will be: TargetDetectionSpellQuestScript) | Touch Spell Explodes w/ no Target; Immune to Silence; Area Effect Ignores LOS; Script Effect Always Applies; Disallow Spell Absorb/Reflect
 | !SpTargetDetected | TESpTargetDetected | Used to determine whether or not a target is being managed or not | Touch; 0 Mag; 0 Area; 600 Seconds; Script Effect (Will be: TargetDetectedEffectScript) | Immune to Silence; Script Effect Always Applies; Disallow Spell Absorb/Reflect
@@ -94,7 +94,7 @@
 
 * Now that the plugin is setup, we can write our scripts and attach them where needed. 
 
-* NOTE: I encourage you to write your scripts in Notepad++ (or your preferred IDE) first before adding them to your esp. I also urge you to use the Construction Set Extender https://www.nexusmods.com/oblivion/mods/36370 
+* __NOTE:__ I encourage you to write your scripts in Notepad++ (or your preferred IDE) first before adding them to your esp. I also urge you to use the Construction Set Extender https://www.nexusmods.com/oblivion/mods/36370 
 I do all of my testing in Remaster exclusively. 
 
 * There are 4 scripts that need to be setup. I've included templates of these scripts. You will need to Find and Replace the ScriptVariables to match what you've created above. Also be sure to change the ScriptName to suit your mod.
@@ -122,10 +122,10 @@ I do all of my testing in Remaster exclusively.
 
 #### Explanation:
 * The ScriptEffectStart block is ran when the Spell effect is first applied. It sets the default variables. 
-* The ScriptEffectUpdate block starts to run and starts a timer NOTE: Without this timer check this block takes upwards of 5 seconds to update, for probably Remastered reasons. After 0.3 seconds it will check to see if TemplateTargetDetectionQuest.rIncomingRef is available to store a reference. TargetDetectionQuestScript stores that rIncomingRef as the next available numbered Reference and clears the variable for re-use. Another reference can be stored in the following frame. 
+* The ScriptEffectUpdate block starts to run and starts a timer __NOTE:__ Without this timer check this block takes upwards of 5 seconds to update, for probably Remastered reasons. After 0.3 seconds it will check to see if TemplateTargetDetectionQuest.rIncomingRef is available to store a reference. TargetDetectionQuestScript stores that rIncomingRef as the next available numbered Reference and clears the variable for re-use. Another reference can be stored in the following frame. 
 * If rIncomingRef is full, the script needs to wait and then try, and so sets the bMustWait variable to 1, causing the script to loop after another 0.2 seconds until the reference is stored
 * The Conditional on Line 21 (if Player.GetDistance rSelf <= 750 && rSelf.GetCombatTarget == Player) defines what a valid target is in your mod. The template dictates that a valid target for storage is one within 750 units and is in combat with the player. You can change this conditional to be quite literally anything to suit your needs. This distance matches the range of the !SpTargetDetection spell. 
-* The ScriptEffectFinish block exists to force the script to stop after the spell effects duration (3 seconds) has expired. NOTE: Without this it just doesn't work, for probably Remastered reasons.
+* The ScriptEffectFinish block exists to force the script to stop after the spell effects duration (3 seconds) has expired. __NOTE:__ Without this it just doesn't work, for probably Remastered reasons.
 
 
 ###	3. TargetDetectedEffectScript
