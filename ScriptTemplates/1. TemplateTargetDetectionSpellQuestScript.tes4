@@ -1,0 +1,19 @@
+scn TemplateTargetDetectionSpellQuestScript
+
+float fQuestDelayTime
+
+begin GameMode
+	set fQuestDelayTime to 1
+	if [!bDebuffConditional] == 1
+		set [!bTargetDetection] to 1
+	elseif [!bDebuffConditional] == 0
+		set [!bTargetDetection] to 0
+	endif
+	
+	if [!bTargetDetection] == 1
+		set fQuestDelayTime to 3
+		[!rCasterRef1].MoveTo Player
+		[!rCasterRef1].Cast [!SpTargetDetection] Player
+		Player.Dispel [!SpTargetDetection]
+	endif
+end

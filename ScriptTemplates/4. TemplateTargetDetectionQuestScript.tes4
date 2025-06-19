@@ -1,0 +1,483 @@
+scn TESQTargetDetectionQuestScript
+
+float fQuestDelayTime
+
+ref rIncomingRef
+ref rRef1
+ref rRef2
+ref rRef3
+ref rRef4
+ref rRef5
+ref rRef6
+ref rRef7
+ref rRef8
+ref rRef9
+ref rRef10
+ref rRef11
+ref rRef12
+ref rRef13
+short bRef1Debuff
+short bRef2Debuff
+short bRef3Debuff
+short bRef4Debuff
+short bRef5Debuff
+short bRef6Debuff
+short bRef7Debuff
+short bRef8Debuff
+short bRef9Debuff
+short bRef10Debuff
+short bRef11Debuff
+short bRef12Debuff
+short bRef13Debuff
+
+begin GameMode	
+set fQuestDelayTime to 0.05
+	if rIncomingRef != 0
+		if rRef1 == 0
+			set rRef1 to rIncomingRef
+			set rIncomingRef to 0
+		elseif rRef2 == 0
+			set rRef2 to rIncomingRef
+			set rIncomingRef to 0
+		elseif rRef3 == 0
+			set rRef3 to rIncomingRef
+			set rIncomingRef to 0
+		elseif rRef4 == 0
+			set rRef4 to rIncomingRef
+			set rIncomingRef to 0
+		elseif rRef5 == 0
+			set rRef5 to rIncomingRef
+			set rIncomingRef to 0
+		elseif rRef6 == 0
+			set rRef6 to rIncomingRef
+			set rIncomingRef to 0
+		elseif rRef7 == 0
+			set rRef7 to rIncomingRef
+			set rIncomingRef to 0
+		elseif rRef8 == 0
+			set rRef8 to rIncomingRef
+			set rIncomingRef to 0
+		elseif rRef9 == 0
+			set rRef9 to rIncomingRef
+			set rIncomingRef to 0
+		elseif rRef10 == 0
+			set rRef10 to rIncomingRef
+			set rIncomingRef to 0
+		elseif rRef11 == 0
+			set rRef11 to rIncomingRef
+			set rIncomingRef to 0
+		elseif rRef12 == 0
+			set rRef12 to rIncomingRef
+			set rIncomingRef to 0
+		elseif rRef13 == 0
+			set rRef13 to rIncomingRef
+			set rIncomingRef to 0
+		endif
+	endif
+
+	if rRef1.IsSpellTarget [!SpTargetDetected] == 0
+		[!rCasterRef2].MoveTo rRef1
+		[!rCasterRef2].Cast [!SpTargetDetected] rRef1
+	else
+		if rRef1.GetDead == 0
+			if bRef1Debuff == 0
+				if [!bDebuffConditional] == 1
+					[!rDebuffCaster].MoveTo rRef1
+					[!rDebuffCaster].Cast [!SpDebuffEffect] rRef1
+					set bRef1Debuff to 1
+				endif
+			elseif bRef1Debuff == 1
+				if Player.GetDistance rRef1 > 150
+					set bRef1Debuff to 0
+					set rRef1 to 0
+					[!rDispelCaster].MoveTo rRef1
+					[!rDispelCaster].Cast [!SpDispel] rRef1
+				endif
+				if rRef1.GetCombatTarget != Player
+					set bRef1Debuff to 0
+					set rRef1 to 0
+					[!rDispelCaster].MoveTo rRef1
+					[!rDispelCaster].Cast [!SpDispel] rRef1
+				endif
+			endif
+		elseif rRef1.GetDead == 1
+			set bRef1Debuff to 0
+			set rRef1 to 0
+		endif
+	endif
+	
+	if rRef2.IsSpellTarget [!SpTargetDetected] == 0
+		[!rCasterRef2].MoveTo rRef2
+		[!rCasterRef2].Cast [!SpTargetDetected] rRef2
+	else
+		if rRef2.GetDead == 0
+			if bRef2Debuff == 0
+				if [!bDebuffConditional] == 1
+					[!rDebuffCaster].MoveTo rRef2
+					[!rDebuffCaster].Cast [!SpDebuffEffect] rRef2
+					set bRef2Debuff to 1
+				endif
+			elseif bRef2Debuff == 1
+				if Player.GetDistance rRef2 > 150
+					set bRef2Debuff to 0
+					set rRef2 to 0
+					[!rDispelCaster].MoveTo rRef2
+					[!rDispelCaster].Cast [!SpDispel] rRef2
+				endif
+				if rRef2.GetCombatTarget != Player
+					set bRef2Debuff to 0
+					set rRef2 to 0
+					[!rDispelCaster].MoveTo rRef2
+					[!rDispelCaster].Cast [!SpDispel] rRef2
+				endif
+			endif
+		elseif rRef2.GetDead == 1
+			set bRef2Debuff to 0
+			set rRef2 to 0
+		endif
+	endif
+	
+	if rRef3.IsSpellTarget [!SpTargetDetected] == 0
+		[!rCasterRef2].MoveTo rRef3
+		[!rCasterRef2].Cast [!SpTargetDetected] rRef3
+	else
+		if rRef3.GetDead == 0
+			if bRef3Debuff == 0
+				if [!bDebuffConditional] == 1
+					[!rDebuffCaster].MoveTo rRef3
+					[!rDebuffCaster].Cast [!SpDebuffEffect] rRef3
+					set bRef3Debuff to 1
+				endif
+			elseif bRef3Debuff == 1
+				if Player.GetDistance rRef3 > 150
+					set bRef3Debuff to 0
+					set rRef3 to 0
+					[!rDispelCaster].MoveTo rRef3
+					[!rDispelCaster].Cast [!SpDispel] rRef3
+				endif
+				if rRef3.GetCombatTarget != Player
+					set bRef3Debuff to 0
+					set rRef3 to 0
+					[!rDispelCaster].MoveTo rRef3
+					[!rDispelCaster].Cast [!SpDispel] rRef3
+				endif
+			endif
+		elseif rRef3.GetDead == 1
+			set bRef3Debuff to 0
+			set rRef3 to 0
+		endif
+	endif
+	
+	if rRef4.IsSpellTarget [!SpTargetDetected] == 0
+		[!rCasterRef2].MoveTo rRef4
+		[!rCasterRef2].Cast [!SpTargetDetected] rRef4
+	else
+		if rRef4.GetDead == 0
+			if bRef4Debuff == 0
+				if [!bDebuffConditional] == 1
+					[!rDebuffCaster].MoveTo rRef4
+					[!rDebuffCaster].Cast [!SpDebuffEffect] rRef4
+					set bRef4Debuff to 1
+				endif
+			elseif bRef4Debuff == 1
+				if Player.GetDistance rRef4 > 150
+					set bRef4Debuff to 0
+					set rRef4 to 0
+					[!rDispelCaster].MoveTo rRef4
+					[!rDispelCaster].Cast [!SpDispel] rRef4
+				endif
+				if rRef4.GetCombatTarget != Player
+					set bRef4Debuff to 0
+					set rRef4 to 0
+					[!rDispelCaster].MoveTo rRef4
+					[!rDispelCaster].Cast [!SpDispel] rRef4
+				endif
+			endif
+		elseif rRef4.GetDead == 1
+			set bRef4Debuff to 0
+			set rRef4 to 0
+		endif
+	endif
+	
+	if rRef5.IsSpellTarget [!SpTargetDetected] == 0
+		[!rCasterRef2].MoveTo rRef5
+		[!rCasterRef2].Cast [!SpTargetDetected] rRef5
+	else
+		if rRef5.GetDead == 0
+			if bRef5Debuff == 0
+				if [!bDebuffConditional] == 1
+					[!rDebuffCaster].MoveTo rRef5
+					[!rDebuffCaster].Cast [!SpDebuffEffect] rRef5
+					set bRef5Debuff to 1
+				endif
+			elseif bRef5Debuff == 1
+				if Player.GetDistance rRef5 > 150
+					set bRef5Debuff to 0
+					set rRef5 to 0
+					[!rDispelCaster].MoveTo rRef5
+					[!rDispelCaster].Cast [!SpDispel] rRef5
+				endif
+				if rRef5.GetCombatTarget != Player
+					set bRef5Debuff to 0
+					set rRef5 to 0
+					[!rDispelCaster].MoveTo rRef5
+					[!rDispelCaster].Cast [!SpDispel] rRef5
+				endif
+			endif
+		elseif rRef5.GetDead == 1
+			set bRef5Debuff to 0
+			set rRef5 to 0
+		endif
+	endif
+		
+	if rRef6.IsSpellTarget [!SpTargetDetected] == 0
+		[!rCasterRef2].MoveTo rRef6
+		[!rCasterRef2].Cast [!SpTargetDetected] rRef6
+	else
+		if rRef6.GetDead == 0
+			if bRef6Debuff == 0
+				if [!bDebuffConditional] == 1
+					[!rDebuffCaster].MoveTo rRef6
+					[!rDebuffCaster].Cast [!SpDebuffEffect] rRef6
+					set bRef6Debuff to 1
+				endif
+			elseif bRef6Debuff == 1
+				if Player.GetDistance rRef6 > 150
+					set bRef6Debuff to 0
+					set rRef6 to 0
+					[!rDispelCaster].MoveTo rRef6
+					[!rDispelCaster].Cast [!SpDispel] rRef6
+				endif
+				if rRef6.GetCombatTarget != Player
+					set bRef6Debuff to 0
+					set rRef6 to 0
+					[!rDispelCaster].MoveTo rRef6
+					[!rDispelCaster].Cast [!SpDispel] rRef6
+				endif
+			endif
+		elseif rRef6.GetDead == 1
+			set bRef6Debuff to 0
+			set rRef6 to 0
+		endif
+	endif
+		
+	if rRef7.IsSpellTarget [!SpTargetDetected] == 0
+		[!rCasterRef2].MoveTo rRef7
+		[!rCasterRef2].Cast [!SpTargetDetected] rRef7
+	else	
+		if rRef7.GetDead == 0
+			if bRef7Debuff == 0
+				if [!bDebuffConditional] == 1
+					[!rDebuffCaster].MoveTo rRef7
+					[!rDebuffCaster].Cast [!SpDebuffEffect] rRef7
+					set bRef7Debuff to 1
+				endif
+			elseif bRef7Debuff == 1
+				if Player.GetDistance rRef7 > 150
+					set bRef7Debuff to 0
+					set rRef7 to 0
+					[!rDispelCaster].MoveTo rRef7
+					[!rDispelCaster].Cast [!SpDispel] rRef7
+				endif
+				if rRef7.GetCombatTarget != Player
+					set bRef7Debuff to 0
+					set rRef7 to 0
+					[!rDispelCaster].MoveTo rRef7
+					[!rDispelCaster].Cast [!SpDispel] rRef7
+				endif
+			endif
+		elseif rRef7.GetDead == 1
+			set bRef7Debuff to 0
+			set rRef7 to 0
+		endif
+	endif
+		
+	if rRef8.IsSpellTarget [!SpTargetDetected] == 0
+		[!rCasterRef2].MoveTo rRef8
+		[!rCasterRef2].Cast [!SpTargetDetected] rRef8
+	else
+		if rRef8.GetDead == 0
+			if bRef8Debuff == 0
+				if [!bDebuffConditional] == 1
+					[!rDebuffCaster].MoveTo rRef8
+					[!rDebuffCaster].Cast [!SpDebuffEffect] rRef8
+					set bRef8Debuff to 1
+				endif
+			elseif bRef8Debuff == 1
+				if Player.GetDistance rRef8 > 150
+					set bRef8Debuff to 0
+					set rRef8 to 0
+					[!rDispelCaster].MoveTo rRef8
+					[!rDispelCaster].Cast [!SpDispel] rRef8
+				endif
+				if rRef8.GetCombatTarget != Player
+					set bRef8Debuff to 0
+					set rRef8 to 0
+					[!rDispelCaster].MoveTo rRef8
+					[!rDispelCaster].Cast [!SpDispel] rRef8
+				endif
+			endif
+		elseif rRef8.GetDead == 1
+			set bRef8Debuff to 0
+			set rRef8 to 0
+		endif
+	endif
+	
+		
+	if rRef9.IsSpellTarget [!SpTargetDetected] == 0
+		[!rCasterRef2].MoveTo rRef9
+		[!rCasterRef2].Cast [!SpTargetDetected] rRef9
+	else
+		if rRef9.GetDead == 0
+			if bRef9Debuff == 0
+				if [!bDebuffConditional] == 1
+					[!rDebuffCaster].MoveTo rRef9
+					[!rDebuffCaster].Cast [!SpDebuffEffect] rRef9
+					set bRef9Debuff to 1
+				endif
+			elseif bRef9Debuff == 1
+				if Player.GetDistance rRef9 > 150
+					set bRef9Debuff to 0
+					set rRef9 to 0
+					[!rDispelCaster].MoveTo rRef9
+					[!rDispelCaster].Cast [!SpDispel] rRef9
+				endif
+				if rRef9.GetCombatTarget != Player
+					set bRef9Debuff to 0
+					set rRef9 to 0
+					[!rDispelCaster].MoveTo rRef9
+					[!rDispelCaster].Cast [!SpDispel] rRef9
+				endif
+			endif
+		elseif rRef9.GetDead == 1
+			set bRef9Debuff to 0
+			set rRef9 to 0
+		endif
+	endif
+	
+		
+	if rRef10.IsSpellTarget [!SpTargetDetected] == 0
+		[!rCasterRef2].MoveTo rRef10
+		[!rCasterRef2].Cast [!SpTargetDetected] rRef10
+	else
+		if rRef10.GetDead == 0
+			if bRef10Debuff == 0
+				if [!bDebuffConditional] == 1
+					[!rDebuffCaster].MoveTo rRef10
+					[!rDebuffCaster].Cast [!SpDebuffEffect] rRef10
+					set bRef10Debuff to 1
+				endif
+			elseif bRef10Debuff == 1
+				if Player.GetDistance rRef10 > 150
+					set bRef10Debuff to 0
+					set rRef10 to 0
+					[!rDispelCaster].MoveTo rRef10
+					[!rDispelCaster].Cast [!SpDispel] rRef10
+				endif
+				if rRef10.GetCombatTarget != Player
+					set bRef10Debuff to 0
+					set rRef10 to 0
+					[!rDispelCaster].MoveTo rRef10
+					[!rDispelCaster].Cast [!SpDispel] rRef10
+				endif
+			endif
+		elseif rRef10.GetDead == 1
+			set bRef10Debuff to 0
+			set rRef10 to 0
+		endif
+	endif
+		
+	if rRef11.IsSpellTarget [!SpTargetDetected] == 0
+		[!rCasterRef2].MoveTo rRef11
+		[!rCasterRef2].Cast [!SpTargetDetected] rRef11
+	else
+		if rRef11.GetDead == 0
+			if bRef11Debuff == 0
+				if [!bDebuffConditional] == 1
+					[!rDebuffCaster].MoveTo rRef11
+					[!rDebuffCaster].Cast [!SpDebuffEffect] rRef11
+					set bRef1Debuff to 1
+				endif
+			elseif bRef11Debuff == 1
+				if Player.GetDistance rRef11 > 150
+					set bRef11Debuff to 0
+					set rRef11 to 0
+					[!rDispelCaster].MoveTo rRef11
+					[!rDispelCaster].Cast [!SpDispel] rRef11
+				endif
+				if rRef11.GetCombatTarget != Player
+					set bRef11Debuff to 0
+					set rRef11 to 0
+					[!rDispelCaster].MoveTo rRef11
+					[!rDispelCaster].Cast [!SpDispel] rRef11
+				endif
+			endif
+		elseif rRef11.GetDead == 1
+			set bRef11Debuff to 0
+			set rRef11 to 0
+		endif
+	endif
+		
+	if rRef12.IsSpellTarget [!SpTargetDetected] == 0
+		[!rCasterRef2].MoveTo rRef12
+		[!rCasterRef2].Cast [!SpTargetDetected] rRef12
+	else	
+		if rRef12.GetDead == 0
+			if bRef12Debuff == 0
+				if [!bDebuffConditional] == 1
+					[!rDebuffCaster].MoveTo rRef12
+					[!rDebuffCaster].Cast [!SpDebuffEffect] rRef12
+					set bRef2Debuff to 1
+				endif
+			elseif bRef12Debuff == 1
+				if Player.GetDistance rRef12 > 150
+					set bRef12Debuff to 0
+					set rRef12 to 0
+					[!rDispelCaster].MoveTo rRef12
+					[!rDispelCaster].Cast [!SpDispel] rRef12
+				endif
+				if rRef12.GetCombatTarget != Player
+					set bRef12Debuff to 0
+					set rRef12 to 0
+					[!rDispelCaster].MoveTo rRef12
+					[!rDispelCaster].Cast [!SpDispel] rRef12
+				endif
+			endif
+		elseif rRef12.GetDead == 1
+			set bRef12Debuff to 0
+			set rRef12 to 0
+		endif
+	endif
+		
+	if rRef13.IsSpellTarget [!SpTargetDetected] == 0
+		[!rCasterRef2].MoveTo rRef13
+		[!rCasterRef2].Cast [!SpTargetDetected] rRef13
+	else
+		if rRef13.GetDead == 0
+			if bRef13Debuff == 0
+				if [!bDebuffConditional] == 1
+					[!rDebuffCaster].MoveTo rRef13
+					[!rDebuffCaster].Cast [!SpDebuffEffect] rRef13
+					set bRef3Debuff to 1
+				endif
+			elseif bRef13Debuff == 1
+				if Player.GetDistance rRef13 > 150
+					set bRef13Debuff to 0
+					set rRef13 to 0
+					[!rDispelCaster].MoveTo rRef13
+					[!rDispelCaster].Cast [!SpDispel] rRef13
+				endif
+				if rRef13.GetCombatTarget != Player
+					set bRef13Debuff to 0
+					set rRef13 to 0
+					[!rDispelCaster].MoveTo rRef13
+					[!rDispelCaster].Cast [!SpDispel] rRef13
+				endif
+			endif
+		elseif rRef13.GetDead == 1
+			set bRef13Debuff to 0
+			set rRef13 to 0
+		endif
+	endif
+		
+end

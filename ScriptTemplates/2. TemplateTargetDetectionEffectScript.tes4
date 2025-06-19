@@ -1,0 +1,36 @@
+scn TemplateTargetDetectionEffectScript
+
+ref rSelf
+float fTimer
+short bMustWait
+
+begin ScriptEffectStart
+	set rSelf to GetSelf
+	set bMustWait to 0
+	set fTimer to 0
+end
+
+begin ScriptEffectUpdate
+	set fTimer to fTimer + GetSecondsPassed
+	if fTimer > 0.3
+		if bMustWait == 1
+			if fTimer > 0.5
+				set bMustWait to 0
+			endif
+		elseif bMustWait == 0
+			if Player.GetDistance rSelf <= 750 && rSelf.GetCombatTarget == Player
+				if rSelf.IsSpellTarget [!SpTargetDetected] == 0
+					if [!TemplateTargetDetectionQuest].rIncomingRef == 0
+						set [!TemplateTargetDetectionQuest].rIncomingRef to rSelf
+					else
+						set bMustWait to 1
+					endif
+				endif
+			endif
+		endif
+	endif
+end
+
+begin ScriptEffectFinish
+	return
+end
