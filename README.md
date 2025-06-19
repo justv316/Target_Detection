@@ -15,6 +15,7 @@
 * This is a modders resource to dynamically collect and manage nearby actor references based on modder defined conditionals. This is accomplished by a spell script storing a reference as a temporary reference in the quest script, storing that temporary reference as a numbered reference, and then clearing the temporary reference variable. Once the reference is managed, the modder can do whatever they wish to it. This template is taken from my own version of this where I am using it to determine valid targets for an aura effect applied by wearing 6 pieces of matching gear. The script that handles the set bonuses sets a global variable (!bDebuffConditional) that tells the TargetDetectionSpellQuestScript to start looking for targets. 
 * NOTE: While you are free to change anything, this is being published with the intention that you only change the "A. ScriptVariables to be set by Modder" to match your mod. Changing the structure of the script outside of what is advised can lead to unpredicatable results. 
 * [Preview of Target Detection in motion](https://youtu.be/lC1ze3wlmHU)
+* The Feather Visual effect is a visual confirmation of Target Detection being applied, and the Fire effect is the debuff being applied.
 
 </details>
 <details>
