@@ -127,6 +127,7 @@ C) Scripts
 
 D) Final Steps
  - Now that everything is created
+ 
  Assign [!SpTargetDetection] the Scripted Effect TargetDetectionEffectScript. 
  Assign [!SpTargetDetected] the Scripted Effect TargetDetectedEffectScript. 
  Assign [!TargetDetectionQuest] the QuestScript TargetDetectionQuestScript. 
