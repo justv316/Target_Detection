@@ -1,11 +1,11 @@
 # Target Detection Documentation
- Purpose: This is a document detailing everything you need to know to integrate Target Detection into your own mod. It is encouraged to read this entire document at least once, referring to the example plugin and template script files, before starting to integrate this into your mod. 
- Languages Used: ObScript
- Estimated Difficulty: Intermediate
- Required Knowledge: Existing Oblivion/Remastered modding & scripting experience. 
-	Familiarity with Global Variables and how to create them; types of spells and effect scripts; Quests and quest scripts; XMarker References.
- License and Usage: This has been given the MIT License. Please refer to the license document for full information, but basically, you can use this and change it and do whatever you want with it so long as you properly credit me. This resource is exclusively being distributed via its GitHub repository, and is being posted on Nexus linking to the repository. 
-	You must link in your mods credits to either the GitHub repository (https://github.com/justv316/Target_Detection) or the Nexus Mod Page (Insert Mod Page once its created) Failure to do so is cringe, uncool, and plagiarism, so please don't do that.  
+* __Purpose__: This is a document detailing everything you need to know to integrate Target Detection into your own mod. It is encouraged to read this entire document at least once, referring to the example plugin and template script files, before starting to integrate this into your mod. 
+* __Languages Used:__ ObScript
+* __Estimated Difficulty:__ Intermediate
+* __Required Knowledge:__ Existing Oblivion/Remastered modding & scripting experience. 
+	* Familiarity with Global Variables and how to create them; types of spells and effect scripts; Quests and quest scripts; XMarker References.
+* License and Usage: This has been given the MIT License. Please refer to the license document for full information, but basically, you can use this and change it and do whatever you want with it so long as you properly credit me. This resource is exclusively being distributed via its GitHub repository, and is being posted on Nexus linking to the repository. 
+	* You must link in your mods credits to either the GitHub repository (https://github.com/justv316/Target_Detection) or the Nexus Mod Page (Insert Mod Page once its created) Failure to do so is cringe, uncool, and plagiarism, so please don't do that.  
 
 <details>
 <summary>Description and Disclaimer</summary>
