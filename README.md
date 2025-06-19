@@ -26,7 +26,7 @@
 
 
 | ScriptVariable | Example | Description |
-| ------------- | ------------- |:-------------:|
+| ------------- | ------------- |-------------|
 | !rCasterRef1 | TECasterRef | Used to apply the Target Detection AOE to the player. |
 | !rCasterRef2 | TECasterRef2 | Used to apply the Target Detected spell effect to detected actors. |
 | !rDebuffCaster | TEAuraRef | Used to apply debuffs to the managed references. |
@@ -42,7 +42,7 @@
 
 
 | ScriptVariable | Example | Description |
-| ------------- | ------------- |:-------------:|
+| ------------- | ------------- |-------------|
 | !TargetDetectionQuest | TEQQTargetDetectionQuest | Runs Target Detection and the management of references. This is the Quest that is running TargetDetectionQuestScript. |
 | !TargetDetectionSpellQuest | TEQQTargetDetectionSpellQuest | Used to determine whether or not Target Detection Should be running. This is the Quest that is running TargetDetectionSpellQuestScript.
 	
@@ -56,7 +56,7 @@
 
 
 | ScriptVariable | Example | Description | Details | Flags
-|-------------|:-------------:|:-------------:|:-------------:|:-------------:|
+|-------------|-------------|-------------|-------------|-------------|
 | !SpTargetDetection | TESpTargetDetection | Used to apply the Script Effect 'TargetDetectionEffectScript' to all actors in the spells distance | Touch; 0 Mag; 750 Area; 3 Seconds; Script Effect (Will be: TargetDetectionSpellQuestScript) | Touch Spell Explodes w/ no Target; Immune to Silence; Area Effect Ignores LOS; Script Effect Always Applies; Disallow Spell Absorb/Reflect
 | !SpTargetDetected | TESpTargetDetected | Used to determine whether or not a target is being managed or not | Touch; 0 Mag; 0 Area; 600 Seconds; Script Effect (Will be: TargetDetectedEffectScript) | Immune to Silence; Script Effect Always Applies; Disallow Spell Absorb/Reflect
 | !SpDispel | TESpAuraDispelDebuff |  Used to dispel applied effects. | Touch; 1000 Mag; 0 Area; 0 Seconds; Dispel | Immune to Silence; Disallow Spell Absorb/Reflect
@@ -71,7 +71,7 @@
 
 
 | ScriptVariable | Example | Description |
-| ------------- | ------------- |:-------------:|
+| ------------- | ------------- |-------------|
 | !bTargetDetection | TEbTargetDetection | Determines whether or not Target Detection is running
 | !bDebuffConditional | TEbAuraCursed | Determines whether or not Target Detection should be running. This can be whatever you need it to be. 
 
