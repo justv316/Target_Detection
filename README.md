@@ -8,7 +8,7 @@
 # License and Usage
 
 * This has been given the MIT License. Please refer to the license document for full information, but basically, you can use this and change it and do whatever you want with it so long as you properly credit me. You must include a link to this page or the repository in your mods readme as well as include me in your credits. You do not need to ask me for permission to use this so long as you follow those requirements. This resource is exclusively being distributed via its GitHub repository and Nexus.
-	* You must link in your mods credits to either the GitHub repository (https://github.com/justv316/Target_Detection) or the Nexus Mod Page (Insert Mod Page once its created) Failure to do so is cringe, uncool, and plagiarism, so please don't do that.  
+	* You must link in your mod's credits to either the GitHub repository (https://github.com/justv316/Target_Detection) or the Nexus Mod Page (https://www.nexusmods.com/oblivionremastered/mods/4589) Failure to do so is cringe, uncool, and plagiarism, so please don't do that.  
 
 	
 <details>
